@@ -6,10 +6,6 @@ app.get("/", (req, res) => {
   res.send("Server del mio blog");
 });
 
-app.listen(port, () => {
-  console.log("Il server è online");
-});
-
 app.get("/bacheca", (req, res) => {
   const post = [
     {
@@ -83,4 +79,8 @@ app.get("/bacheca", (req, res) => {
   post.forEach((post) => (totalPost += 1));
 
   res.json([post, "Total Post: " + totalPost]);
+});
+
+app.listen(port, () => {
+  console.log("Il server è online");
 });
