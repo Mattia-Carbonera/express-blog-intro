@@ -11,9 +11,9 @@ app.get("/", (req, res) => {
 app.get("/bacheca", (req, res) => {
   const post = [
     {
-      Title: "titolo1",
-      Content: "contenuto1",
-      Image: "immagine1",
+      Title: "ciambellone",
+      Content: "Ricetta",
+      Image: "http://127.0.0.1:3000/ciambellone.jpeg",
       Tags: [
         "stringa1",
         "stringa2",
@@ -24,9 +24,9 @@ app.get("/bacheca", (req, res) => {
       ],
     },
     {
-      Title: "titolo2",
-      Content: "contenuto2",
-      Image: "immagine2",
+      Title: "cracker barbabietola",
+      Content: "Ricetta",
+      Image: "http://127.0.0.1:3000/cracker_barbabietola.jpeg",
       Tags: [
         "stringa1",
         "stringa2",
@@ -37,9 +37,9 @@ app.get("/bacheca", (req, res) => {
       ],
     },
     {
-      Title: "titolo3",
-      Content: "contenuto3",
-      Image: "immagine3",
+      Title: "pane fritto dolce",
+      Content: "Ricetta",
+      Image: "http://127.0.0.1:3000/pane_fritto_dolce.jpeg",
       Tags: [
         "stringa1",
         "stringa2",
@@ -50,9 +50,9 @@ app.get("/bacheca", (req, res) => {
       ],
     },
     {
-      Title: "titolo4",
-      Content: "contenuto4",
-      Image: "immagine4",
+      Title: "pasta barbabietola",
+      Content: "Ricetta",
+      Image: "http://127.0.0.1:3000/pasta_barbabietola.jpeg",
       Tags: [
         "stringa1",
         "stringa2",
@@ -63,9 +63,9 @@ app.get("/bacheca", (req, res) => {
       ],
     },
     {
-      Title: "titolo5",
-      Content: "contenuto5",
-      Image: "immagine5",
+      Title: "torta paesana",
+      Content: "Ricetta",
+      Image: "http://127.0.0.1:3000/torta_paesana.jpeg",
       Tags: [
         "stringa1",
         "stringa2",
@@ -80,7 +80,7 @@ app.get("/bacheca", (req, res) => {
   let totalPost = 0;
   post.forEach((post) => (totalPost += 1));
 
-  res.json([post, "Total Post: " + totalPost]);
+  res.json([post, "Total Post: " + parseInt(totalPost)]);
 });
 
 app.listen(port, () => {
